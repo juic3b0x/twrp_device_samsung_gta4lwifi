@@ -1,0 +1,40 @@
+# mount point	fstype	device											device2				flags
+# Logical partitions
+/product																					flags=display="Product"
+/vendor																						flags=display="Vendor"
+/odm																						flags=display="ODM"
+
+# Other partitions
+/metadata		ext4	/dev/block/by-name/metadata											flags=display="Metadata"
+/recovery		emmc	/dev/block/bootdevice/by-name/recovery								flags=slotselect;display="Recovery";backup=1;flashimg=1
+/boot			emmc	/dev/block/bootdevice/by-name/boot									flags=slotselect;display="Boot";backup=1;flashimg=1
+
+# Misc
+/misc			emmc	/dev/block/bootdevice/by-name/misc
+
+# AVB partitions
+/dtbo			emmc	/dev/block/bootdevice/by-name/dtbo									flags=slotselect;display="DTBO";backup=1;flashimg=1
+/vbmeta			emmc	/dev/block/bootdevice/by-name/vbmeta								flags=slotselect;display="VBMeta";backup=1;flashimg=1
+/vbmeta_samsung	emmc	/dev/block/bootdevice/by-name/vbmeta_samsung						flags=slotselect;display="VBMeta Samsung";backup=1;flashimg=1
+
+# Modem partitions
+/firmware		emmc	/dev/block/bootdevice/by-name/apnhlos								flags=slotselect;backup=1;display="Firmware"
+/modem			emmc	/dev/block/bootdevice/by-name/modem									flags=slotselect;backup=1
+/dsp			emmc	/dev/block/bootdevice/by-name/dsp									flags=slotselect;backup=1
+
+# EFS partitions
+/efs2			ext4	/dev/block/bootdevice/by-name/efs									flags=backup=1;display="EFS"
+/efs			ext4	/dev/block/bootdevice/by-name/sec_efs								flags=backup=1;display="Sec EFS"
+
+# Persist
+/persist		ext4	/dev/block/bootdevice/by-name/persist 								flags=display="Persist"
+/persist_image	emmc	/dev/block/bootdevice/by-name/persist 								flags=display="Persist";backup=1
+
+/prism			ext4	/dev/block/bootdevice/by-name/prism                         		flags=display="Prism"
+/optics			ext4	/dev/block/bootdevice/by-name/optics      							flags=display="Optics"
+#/keydata		ext4	/dev/block/bootdevice/by-name/keydata								
+#/keyrefuge		ext4	/dev/block/bootdevice/by-name/keyrefuge								
+
+# Removable storage
+/external_sd	auto	/dev/block/mmcblk1p1						/dev/block/mmcblk1		flags=fsflags="nosuid,nodev,utf8";display="MicroSD";storage;wipeingui;removable
+/usb_otg		vfat	/dev/block/sda1								/dev/block/sda			flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable

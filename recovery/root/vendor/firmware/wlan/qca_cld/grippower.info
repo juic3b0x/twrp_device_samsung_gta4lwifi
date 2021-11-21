@@ -1,0 +1,9 @@
+#Format as A:B A->2.4GHz Tx limited poweri value multiply 2, B->5GHz Tx limited power multiply 2, A,B range is (0,60)
+#In other words the tx power value step long is 0.5 dbm; eg.30 means 15 dbm
+#Pls don't include space among the equation
+#1--nolevel just for solution they just need one gear
+#2--level1 level2 target for the txpower sensitive solution they need tow gears
+nolevel=40:40
+level1=25:11
+level2=30:23
+END
