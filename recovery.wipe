@@ -1,0 +1,2 @@
+/dev/block/bootdevice/by-name/userdata
+/dev/block/bootdevice/by-name/boot

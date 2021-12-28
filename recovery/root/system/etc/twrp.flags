@@ -1,6 +1,10 @@
 # mount point	fstype	device											device2				flags
 # Logical partitions
 /product																					flags=display="Product"
+/system_image   emmc            /dev/block/mapper/system                flags=backup=0;flashimg=1;display="System-Image"
+/vendor_image         emmc           /dev/block/mapper/vendor                flags=backup=0;flashimg=1;display="Vendor-Image"
+/product_image   emmc            /dev/block/mapper/product               flags=backup=0;flashimg=1;display="Product-Image"
+/odm_image   emmc            /dev/block/mapper/odm           flags=backup=0;flashimg=1;display="Odm-Image"
 /vendor																						flags=display="Vendor"
 /odm																						flags=display="ODM"
 
@@ -30,10 +34,10 @@
 /persist		ext4	/dev/block/bootdevice/by-name/persist 								flags=display="Persist"
 /persist_image	emmc	/dev/block/bootdevice/by-name/persist 								flags=display="Persist";backup=1
 
-/prism			ext4	/dev/block/bootdevice/by-name/prism                         		flags=display="Prism"
-/optics			ext4	/dev/block/bootdevice/by-name/optics      							flags=display="Optics"
+/prism_image	emmc	/dev/block/bootdevice/by-name/prism                         		flags=display="Prism"
+/optics_image	emmc	/dev/block/bootdevice/by-name/optics      							flags=display="Optics"
 #/keydata		ext4	/dev/block/bootdevice/by-name/keydata								
-#/keyrefuge		ext4	/dev/block/bootdevice/by-name/keyrefuge								
+#/keyrefuge		f2fs	/dev/block/bootdevice/by-name/keyrefuge								
 
 # Removable storage
 /external_sd	auto	/dev/block/mmcblk1p1						/dev/block/mmcblk1		flags=fsflags="nosuid,nodev,utf8";display="MicroSD";storage;wipeingui;removable
