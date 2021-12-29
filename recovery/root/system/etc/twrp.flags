@@ -1,10 +1,10 @@
 # mount point	fstype	device											device2				flags
 # Logical partitions
 /product																					flags=display="Product"
-/system_image   emmc            /dev/block/mapper/system                flags=backup=0;flashimg=1;display="System-Image"
-/vendor_image         emmc           /dev/block/mapper/vendor                flags=backup=0;flashimg=1;display="Vendor-Image"
-/product_image   emmc            /dev/block/mapper/product               flags=backup=0;flashimg=1;display="Product-Image"
-/odm_image   emmc            /dev/block/mapper/odm           flags=backup=0;flashimg=1;display="Odm-Image"
+/system_image   emmc            /dev/block/mapper/system                flags=backup=1;flashimg=1;display="System-Image"
+/vendor_image         emmc           /dev/block/mapper/vendor                flags=backup=1;flashimg=1;display="Vendor-Image"
+/product_image   emmc            /dev/block/mapper/product               flags=backup=1;flashimg=1;display="Product-Image"
+/odm_image   emmc            /dev/block/mapper/odm           flags=backup=1;flashimg=1;display="Odm-Image"
 /vendor																						flags=display="Vendor"
 /odm																						flags=display="ODM"
 
