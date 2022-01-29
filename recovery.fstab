@@ -47,7 +47,6 @@ product						/product	ext4	ro,barrier=1,discard		wait,avb,logical,first_stage_mo
 /dev/block/bootdevice/by-name/metadata		/metadata	ext4	defaults			wait,first_stage_mount
 /dev/block/bootdevice/by-name/userdata		/data		f2fs	defaults			wait,encryptable=footer,length=-16384
 /dev/block/bootdevice/by-name/cache		/cache		ext4	defaults			recoveryonly
-/dev/block/mmcblk0p1				/sdcard		vfat	defaults			recoveryonly
 /dev/block/bootdevice/by-name/sec_efs		/efs		ext4	defaults			recoveryonly
 /dev/block/bootdevice/by-name/sec_efs		/sec_efs	ext4	defaults			recoveryonly
 /dev/block/bootdevice/by-name/carrier		/carrier	ext4	defaults			recoveryonly
@@ -62,7 +61,7 @@ product						/product	ext4	ro,barrier=1,discard		wait,avb,logical,first_stage_mo
 
 # Samsung ODE
 #/dev/block/bootdevice/by-name/keydata		/keydata        ext4	defaults			recoveryonly
-/dev/block/bootdevice/by-name/keyrefuge		/keyrefuge	f2fs	defaults			recoveryonly
+#/dev/block/bootdevice/by-name/keyrefuge		/keyrefuge	f2fs	defaults			recoveryonly
 
 #Auto-generated code by FOTA Portal
 /dev/block/bootdevice/by-name/dtbo		/dtbo		emmc	default				recoveryonly
