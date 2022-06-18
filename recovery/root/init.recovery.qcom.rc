@@ -31,7 +31,4 @@ on fs
 
     export ANDROID_ROOT /system_root
 
-#to cut charging battery path
-    write /sys/class/power_supply/battery/siop_level 0
-    
 import /init.recovery.qcom_decrypt.rc
